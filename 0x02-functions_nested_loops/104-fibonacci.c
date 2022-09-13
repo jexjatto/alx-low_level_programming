@@ -6,7 +6,7 @@
 * Return: always 0
 */
 int main(void)
-{	
+{
 	unsigned long int a, a1, a2, b, b1, b2, c, c1, c2, d, e;
 
 	a = 1;
