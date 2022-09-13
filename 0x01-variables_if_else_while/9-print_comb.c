@@ -1,26 +1,23 @@
 #include <stdio.h>
-
 /**
-* main - Entry point
-*
-* Description: This program prints all possible combination of single
-* digit numbers seperated  with commas
-*
-* Return: Always returns int 0 for (Success)
-*/
+ * main - entry point
+ *
+ * Return: alway returns 0
+ *
+ */
 int main(void)
 {
 	int i;
 
-	for (i = 48; i < 58; i++)
+	for (i = 10; i < 20; i++)
 	{
-		putchar(i);
-		if (i != 57)
+		putchar((i % 10) + '0');
+		if (i != 19)
 		{
-			putchar(44);
-			putchar(32);
+			putchar(',');
+			putchar(' ');
 		}
 	}
-		putchar('\n');
+	putchar('\n');
 	return (0);
 }
