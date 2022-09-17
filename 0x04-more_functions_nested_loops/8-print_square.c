@@ -1,36 +1,31 @@
+#include <stdio.h>
 #include "main.h"
 
-int _putchar(char c);
-
 /**
- * print_number - like a hello world
- *
- * @n: params an integer
- *
- * No return
- */
+*print_square - prints squares
+*@size: parameter
+*Return: returns nothing
+*/
 
-
-void print_number(int n)
+void print_square(int size)
 {
+	int inc1, inc2;
 
-	unsigned int n1 = 0;
-
-	if  (n < 0)
+	if (size > 0)
 	{
-		n1 = -n;
-		_putchar('-');
-	}
+		for (inc1 = 0; inc1 < size; inc1++)
+		{
+			for (inc2 = 0; inc2 < (size - 1); inc2++)
+			{
+				putchar('#');
+			}
 
+			putchar('#');
+			putchar('\n');
+		}
+	}
 	else
 	{
-		n1 = n;
+		putchar('\n');
 	}
-
-	if (n1 / 10)
-	{
-		print_number(n1 / 10);
-	}
-
-	_putchar((n1 % 10) + '0');
 }
