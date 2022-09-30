@@ -1,34 +1,35 @@
-#include <stdio.h>
 #include "main.h"
-#include <time.h>
 
 /**
- * _atoi - this converts a string to an integer
- * @s: is a string
- *
- * Return: returns an integer
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
  */
 int _atoi(char *s)
 {
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	int i;
-	int r = 0;
-	int sign = -1;
-	int b = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (*(s + count) != '\0')
 	{
-		if (s[i] == '-')
-			sign = sign * -1;
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			r = r * 10;
-			r -= (s[i] - '0');
-			b = 1;
-		}
-		else if (b == 1)
-			break;
+	if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+	break;
+
+	if (*(s + count) == '-')
+	pn *= -1;
+
+	if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+	{
+	if (size > 0)
+	m *= 10;
+	size++;
 	}
-	r = sign * r;
-	return (r);
+	count++;
+	}
+
+	for (i = count - size; i < count; i++)
+	{
+	oi = oi + ((*(s + i) - 48) * m);
+	m /= 10;
+	}
+	return (oi * pn);
 }
