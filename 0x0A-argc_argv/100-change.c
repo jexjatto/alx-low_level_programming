@@ -2,42 +2,39 @@
 #include <stdlib.h>
 
 /**
- * main - print min number of coins to return as chang
- * @argc:  the size of the argument vector
- * @argv: an array containing the
- * Return: 0 is success
+ * main - prints the minimum number of coins to make change for an amount.
+ * of money.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
 
 int main(int argc, char *argv[])
 {
-	int cents, rem, change;
-	int ch25, ch10, ch5, ch2, ch1;
+	int cents, ncoins = 0;
 
-	if (argc != 2)
+	if (argc == 1 || argc > 2)
 	{
-		printf("Error\n");
-		return (1);
+	printf("Error\n");
+	return (1);
 	}
-	else
-		cents = atoi(argv[1]);
 
-	if (cents <= 0)
+	cents = atoi(argv[1]);
+
+	while (cents > 0)
 	{
-		printf("0\n");
-		return (0);
+	if (cents >= 25)
+		cents -= 25;
+	else if (cents >= 10)
+		cents -= 10;
+	else if (cents >= 5)
+		cents -= 5;
+	else if (cents >= 2)
+		cents -= 2;
+	else if (cents >= 1)
+		cents -= 1;
+	ncoins += 1;
 	}
-	ch25 = cents / 25;
-	rem = cents % 25;
-	ch10 = rem / 10;
-	rem %= 10;
-	ch5 = rem / 5;
-	rem %= 5;
-	ch2 = rem / 2;
-	rem %= 2;
-	ch1 = rem / 1;
-
-	change = ch25 + ch10 + ch5 + ch2 + ch1;
-
-	printf("%d\n", change);
+	printf("%d\n", ncoins);
 	return (0);
 }
