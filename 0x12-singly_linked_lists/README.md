@@ -1,2 +1,1 @@
-General
-When and why using linked lists vs arrays
+This directory contains programs on practical use of linked-list data structures.

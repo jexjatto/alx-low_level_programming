@@ -1,12 +1,13 @@
-#include <stdio.h>
+#include "lists.h"
 
 /**
- * bmain - function executed before main
- * Return: no return.
+ * first - executed first before the main function
+ * Description: it prints a certain text before the main
+ * function begins
+ * Return: void
  */
-
-void __attribute__((constructor)) bmain()
+void first(void)
 {
-    printf("You're beat! and yet, you must allow");
-    printf(",\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
