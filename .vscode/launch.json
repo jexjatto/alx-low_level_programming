@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/jextr/OneDrive/Documents/GitHub/alx-low_level_programming/0x13-more_singly_linked_lists",
-      "program": "c:/Users/jextr/OneDrive/Documents/GitHub/alx-low_level_programming/0x13-more_singly_linked_lists/build/Debug/outDebug",
+      "cwd": "c:/Users/jextr/OneDrive/Documents/GitHub/alx-low_level_programming",
+      "program": "c:/Users/jextr/OneDrive/Documents/GitHub/alx-low_level_programming/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
